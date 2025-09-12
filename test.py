@@ -7,11 +7,13 @@ from Employee import *
 from Nurse import *
 
 if __name__ =="__main__":
-    adam = Patient()
+    adam = Nurse()
     print (adam.name)
     print(adam.age)
-    print(adam.Introduce())
-    print("adding a condition")
-    adam.add_condition("arthritis")
-    print(adam.describe_conditions())
-    print(adam.take_medication())
+    print(adam.introduce())
+    print(adam.department)
+    print(adam.assigned_doctor)
+    #print("adding a condition")
+    #adam.add_condition("arthritis")
+    #print(adam.describe_conditions())
+    #print(adam.take_medication())

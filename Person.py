@@ -5,6 +5,6 @@ class Person():
         self.name = name
         self.age = age
     
-    def Introduce(self):
+    def introduce(self):
         return (f"Hello my name is {self.name} and I am {self.age}")
 
