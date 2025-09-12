@@ -40,4 +40,5 @@ class Doctor(Employee):
             if nurse.nurse_id == self.assigned_nurse.nurse_id:
                 return "This nurse is already assigned to this doctor"
         self.assigned_nurse = nurse
+        nurse.assigned_doctor = self
         return (f"{nurse.name} has been assigned to {self.name}")
