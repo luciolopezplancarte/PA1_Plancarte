@@ -21,14 +21,23 @@ class Doctor(Employee):
             return "Medication not given"
         
         patient.add_condition(condition,medication)
-        return (f"Dr. {self.name} have prescribed {medication} for {patient.name}'s condition:  {condition}")
+        return (f"Dr. {self.name} have prescribed {medication} for {patient.name}'s condition: {condition}")
     
-    def add_patient(patient):
-        return ""
+    def add_patient(self,patient):
+        if patient not in self.patients:
+            self.patients.append(patient)
+            return (f"Added {patient.name} to Doctor {self.name} patient list.") 
+        return (f"{patient.name} is already in Doctor {self.name}'s patient list")
 
-    def list_patients():
-        return ""
+    def list_patients(self):
+        if len(self.patients) == 0:
+            return (f"No Patients in Doctor {self.name}'s patient list.")
+        return ", ".join(str(patient.name) for patient in self.patients)
 
-    def get_nurse(Nurse):
-        return ""
-    
+
+    def assign_nurse(self, nurse):
+        if nurse.assigned_doctor is not None:
+            if nurse.nurse_id == self.assigned_nurse.nurse_id:
+                return "This nurse is already assigned to this doctor"
+        self.assigned_nurse = nurse
+        return (f"{nurse.name} has been assigned to {self.name}")

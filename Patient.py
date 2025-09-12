@@ -22,6 +22,6 @@ class Patient(Person):
     def take_medication(self):
         if len(self.conditions) == 0:
             return "No medications prescribed"
-        return "I am taking "+", ".join(str(self.conditions[condition]) for condition in self.conditions+"for my conditions")
+        return "I am taking "+", ".join(str(self.conditions[condition]) for condition in self.conditions)
 
     

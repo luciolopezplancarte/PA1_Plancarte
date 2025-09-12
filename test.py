@@ -25,22 +25,33 @@ if __name__ =="__main__":
     print(central_hospital.add_employee(nurse_davis))
    
    #Assign Nurse to doctors
-    
+    print(dr_jones.assign_nurse(nurse_brown))
+
    #Nurses assist their assigned doctors
+    print(nurse_brown.introduce())
+    print(nurse_brown.assist_doctor())
 
    #Create Patients
     patient_wilson = Patient("Charlie Wilson", 30, "P001")
     #patient_taylor = Patient("Diana Taylor", 55, "P002")
     #patient_jones = Patient("Michale Jones", 63, "P003")
-   #Assign Patients to Doctors
-    
+
+    #Assign Patients to Doctors
+    print(dr_jones.list_patients())
+    print(dr_jones.add_patient(patient_wilson))
+    print(dr_jones.list_patients())
+
    #Diagnose and prescribe for patients
     print(dr_jones.diagnose(patient_wilson,"Pneumonia"))
     print(dr_jones.prescribe_medication(patient_wilson,"Pneumonia","Azithromycin"))
+
    #Display patient conditions
-    #print(patient_wilson.introduce())
-    #print(patient_wilson.describe_conditions())
-    #print(patient_wilson.take_medication())
+    print(patient_wilson.introduce())
+    print(patient_wilson.describe_conditions())
+    print(patient_wilson.take_medication())
+
+    print("="*50)
+    print(nurse_brown.check_vitals(patient_wilson))
 
 
 
