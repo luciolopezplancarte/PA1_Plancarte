@@ -10,10 +10,10 @@ class Patient(Person):
     def add_condition(self, condition ="ailment", medication= ""):
         self.conditions[condition] = medication
 
-    def describe_condition(self):
+    def describe_conditions(self):
         return "I have "+", ".join(str(condition) for condition in self.conditions)
 
-    def take_medications(self):
+    def take_medication(self):
         return "I am taking "+", ".join(str(self.conditions[condition]) for condition in self.conditions)
 
     
