@@ -3,7 +3,7 @@ from Employee import *
 
 class Nurse(Employee):
     def __init__(self, name="Ratchet",age=35,id="555",department="Bones"):
-        super().__init__(name,age)
+        super().__init__(id,name,age)
         self.nurse_id = id
         self.department=department
         self.assigned_doctor = None 

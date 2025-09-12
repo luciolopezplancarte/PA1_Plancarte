@@ -3,7 +3,7 @@ from Person import *
 
 class Employee(Person):
 
-    def __init__(self, name = "Job", id="316"):
-        super().__init__(name)
+    def __init__(self, id="316", name = "Job", age=24):
+        super().__init__(name,age)
         self.emp_id = id
 
