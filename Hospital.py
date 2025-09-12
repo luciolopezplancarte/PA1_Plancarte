@@ -33,7 +33,6 @@ class Hospital():
     Returns: list: A list of names for Doctors who specialize in the specified field
     '''
     def find_doctor(self,speciality):
-        ##TODO:
         ##Use the employee list to look for doctors with a speciality
         ## doctors have a unique identifier, emp_id starts with D
         ##check if the doctor has the speciality
