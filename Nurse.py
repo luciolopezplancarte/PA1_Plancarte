@@ -9,7 +9,7 @@ class Nurse(Employee):
         self.assigned_doctor = None 
 
     def introduce(self):
-        return (f"Hello my name is {self.name} I am {self.age} years old. I'm a nurse working in the {self.department} department. I'm assigned to Dr.{self.assigned_doctor}.")
+        return (f"{super().introduce()}I'm a nurse working in the {self.department} department. I'm assigned to Dr.{self.assigned_doctor}.")
 
     def assist_doctor(self):
         if self.assigned_doctor is None:

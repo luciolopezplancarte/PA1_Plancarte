@@ -10,7 +10,7 @@ class Doctor(Employee):
         self.assigned_nurse = None #nurse object
 
     def introduce(self):
-        return (f"Hello my name is {self.name} my speciality is {self.speciality}")
+        return (f"{super().introduce()}My speciality is {self.speciality}")
 
     def diagnose(self, patient, condition):
         patient.add_condition(condition)
