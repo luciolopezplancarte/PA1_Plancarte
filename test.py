@@ -53,6 +53,4 @@ if __name__ =="__main__":
     print("="*50)
     print(nurse_brown.check_vitals(patient_wilson))
 
-    print(dr_jones.emp_id)
-    print(nurse_brown.emp_id)
-
+    print(f"Doctors who specialize in 'Pulmonology': {central_hospital.find_doctor('Pulmonology')}")

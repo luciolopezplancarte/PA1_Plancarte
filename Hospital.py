@@ -35,7 +35,14 @@ class Hospital():
     def find_doctor(self,speciality):
         ##TODO:
         ##Use the employee list to look for doctors with a speciality
-        doctor_list = []
+        ## doctors have a unique identifier, emp_id starts with D
+        ##check if the doctor has the speciality
+        doctor_list =[]
+        for e in self.employees:
+            if e.emp_id[0]=='D':
+                if e.speciality == speciality:
+                    doctor_list.append(str(e.name))
+        
         return doctor_list
 
     
