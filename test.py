@@ -7,13 +7,14 @@ from Employee import *
 from Nurse import *
 
 if __name__ =="__main__":
-    adam = Nurse()
-    print (adam.name)
-    print(adam.age)
-    print(adam.introduce())
-    print(adam.department)
-    print(adam.assigned_doctor)
-    #print("adding a condition")
-    #adam.add_condition("arthritis")
-    #print(adam.describe_conditions())
-    #print(adam.take_medication())
+    #Create Hospital
+    central_hospital = Hospital("Central Hospital")
+
+    #Create Doctor
+    dr_jones = Doctor("Emily Jones", 45, "D001", "Pulmonology")
+    print(dr_jones.introduce())
+    print("o"*50)
+
+    ##Add Employees to the hospital
+    print(central_hospital.add_employee(dr_jones))
+
