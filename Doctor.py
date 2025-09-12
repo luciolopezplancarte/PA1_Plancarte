@@ -14,11 +14,14 @@ class Doctor(Employee):
 
     def diagnose(self, patient, condition):
         patient.add_condition(condition)
-        return (f"Dr. {name} have diagnosed {patient.name} with {self.condition}")
+        return (f"Dr. {self.name} have diagnosed {patient.name} with {condition}")
 
     def prescribe_medication(self,patient, condition, medication):
+        if condition not in patient.conditions:
+            return "Medication not given"
+        
         patient.add_condition(condition,medication)
-        return (f"Dr. {name} have diagnosed {patient.name} with {self.condition}")
+        return (f"Dr. {self.name} have prescribed {medication} for {patient.name}'s condition:  {condition}")
     
     def add_patient(patient):
         return ""
