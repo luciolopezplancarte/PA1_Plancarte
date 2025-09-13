@@ -1,9 +1,13 @@
 #Hospital Class
 
 class Hospital():
+
+    _name = None
+    _employees = None
+
     def __init__(self, name):
-        self.name = name 
-        self.employees =[]
+        self._name = name 
+        self._employees =[]
 
     '''
     Method to add an employee to the hospital employee list if they are not already in the list
@@ -11,21 +15,21 @@ class Hospital():
     Returns: str: A message indicating if the employee was added or if they were already an employee
     '''
     def add_employee(self, employee):
-        if employee not in self.employees:
-            self.employees.append(employee)
-            return (f"{employee.name} has been added as an employee at {self.name}")
+        if employee not in self._employees:
+            self._employees.append(employee)
+            return (f"{employee._name} has been added as an employee at {self._name}")
         else:
-            return (f"{employee.name} is already an employee at {self.name}")
+            return (f"{employee._name} is already an employee at {self._name}")
 
     '''
     Method to list the names of all employees curretnly working at the hospital
     Returns: list: A list of employee names(strings)
     '''
     def list_employees(self):
-        if len(employees) == 0:
+        if len(self._employees) == 0:
             return "No One is currently employed"
     
-        return ", ".join(str(employee.name) for employee in self.employees)
+        return ", ".join(str(employee._name) for employee in self._employees)
             
     '''
     Method to find from the employees in the hospital all doctors that specialize in a given field.
@@ -37,10 +41,10 @@ class Hospital():
         ## doctors have a unique identifier, emp_id starts with D
         ##check if the doctor has the speciality
         doctor_list =[]
-        for e in self.employees:
-            if e.emp_id[0]=='D':
-                if e.speciality == speciality:
-                    doctor_list.append(str(e.name))
+        for doctor in self._employees:
+            if doctor.emp_id[0]=='D':
+                if doctor._speciality == speciality:
+                    doctor_list.append(str(doctor._name))
         
         return doctor_list
 

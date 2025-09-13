@@ -32,6 +32,8 @@ if __name__ =="__main__":
     print(dr_jones.assign_nurse(nurse_brown))
     print(dr_smith.assign_nurse(nurse_davis))
     print("#"*50)
+    print(dr_jones.assign_nurse(nurse_brown))
+    print(dr_jones.assign_nurse(nurse_davis))
 
    #Nurses assist their assigned doctors
     print(nurse_brown.introduce())
