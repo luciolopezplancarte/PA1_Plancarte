@@ -3,11 +3,6 @@ from Employee import *
 
 class Doctor(Employee):
 
-    _doctor_id = None
-    _speciality = None
-    _patients = None
-    _assigned_nurse= None
-
     def __init__(self, name="Mario", age=45,id="444", speciality="Mushrooms"):
         super().__init__(id,name,age)
         self._doctor_id = id

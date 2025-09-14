@@ -3,9 +3,6 @@ from Person import *
 
 class Patient(Person):
     
-    _patient_id = None
-    _conditions = None
-
     def __init__(self, name = "Patient 0", age=30, id= "000"):
         super().__init__(name, age)
         self._patient_id = id

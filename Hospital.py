@@ -2,9 +2,6 @@
 
 class Hospital():
 
-    _name = None
-    _employees = None
-
     def __init__(self, name):
         self._name = name 
         self._employees =[]
